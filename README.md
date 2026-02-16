@@ -1,3 +1,4 @@
+---
 
 ```markdown
 # ⚖️ AI Judge: Decentralized Arbitration Protocol
@@ -12,31 +13,31 @@ Traditional arbitration is slow, costly, and relies on human intermediaries. **A
 - **🌐 Web-Evidence Verification:** Uses `gl.nondet.web.render` to analyze real-time data from any URL.
 - **🤖 Decentralized AI Judgment:** Leverages LLM agents that must reach consensus via the `strict_eq` principle.
 - **📜 Transparent & Immutable:** Every case, evidence link, and final verdict is recorded on the GenLayer blockchain.
-- **🛠 Scalable Design:** Built with the latest `py-genlayer:latest` standards for high performance.
+- **🛠 Scalable Design:** Built with the latest `py-genlayer:latest` standards.
 
 ---
 
-## 🏗 How It Works (The Flow)
-1. **Case Creation:** A user opens a dispute by providing the **Agreement Terms** and a **URL** containing the evidence.
-2. **AI Analysis:** When `resolve_dispute` is called, GenLayer nodes fetch the web content.
-3. **Consensus:** The AI analyzes the evidence against the terms. All validators must agree on the winner and the reasoning.
-4. **Finalization:** Once finalized, the state is updated, and the judgment is issued.
+## 🏗 How It Works
+1. **Case Creation:** A user opens a dispute with **Agreement Terms** and an **Evidence URL**.
+2. **AI Analysis:** GenLayer nodes fetch the web content and analyze it against the terms.
+3. **Consensus:** All validators must agree on the winner (Claimant/Defendant) and the reasoning.
+4. **Finalization:** The verdict is written to the blockchain.
 
 ---
 
-## 📸 Proof of Execution & Testing
-I have rigorously tested this contract in **GenLayer Studio** to ensure accuracy in different scenarios.
+## 📸 Proof of Execution
+I have rigorously tested this contract in **GenLayer Studio** to ensure accuracy.
 
 ### 1. Contract Deployment
-The `AIJudge` contract successfully deployed on the GenLayer Local Node.
+Successful deployment of the `AIJudge` contract on the GenLayer Local Node.
 ![Studio Deployment](./screenshots/studio.png)
 
 ### 2. Success Scenario (Winner: Claimant)
-In this test, the AI confirmed that the terms were met based on the provided web evidence.
+The AI confirmed that the terms were met based on the provided web evidence.
 ![Success Verdict](./screenshots/success.png)
 
 ### 3. Failure Scenario (Winner: Defendant)
-In this test, the AI detected that the terms were not fulfilled and ruled in favor of the defendant.
+The AI detected that the terms were not fulfilled and ruled in favor of the defendant.
 ![Failure Verdict](./screenshots/failure.png)
 
 ---
@@ -45,7 +46,6 @@ In this test, the AI detected that the terms were not fulfilled and ruled in fav
 - **Framework:** GenLayer Python SDK (`py-genlayer:latest`)
 - **Consensus Logic:** `gl.eq_principle.strict_eq`
 - **Data Fetching:** `gl.nondet.web.render`
-- **Environment:** Dockerized GenLayer Local Node
 
 ---
 
@@ -63,13 +63,10 @@ docker compose up
 ```
 
 
-3. **Interact:** Use GenLayer Studio to deploy `contracts/ai_judge.py` and start resolving disputes!
+3. **Interact:** Use GenLayer Studio to deploy `contracts/ai_judge.py`.
 
 ---
 
 **Developed for the GenLayer "From Zero to GenLayer" Mission.**
-*Harnessing the power of Intelligent Smart Contracts.*
 
 ```
-
----
