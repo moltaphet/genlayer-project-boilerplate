@@ -1,5 +1,3 @@
----
-
 ```markdown
 # ⚖️ AI Judge: Decentralized Arbitration Protocol
 **Building the Future of Justice on GenLayer**
@@ -68,5 +66,3 @@ docker compose up
 ---
 
 **Developed for the GenLayer "From Zero to GenLayer" Mission.**
-
-```
