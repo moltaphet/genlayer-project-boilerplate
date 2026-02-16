@@ -1,87 +1,75 @@
 
 ```markdown
-# ⚖️ AI Judge: Next-Gen Decentralized Arbitration
-**An Intelligent Dispute Resolution Protocol built on GenLayer**
+# ⚖️ AI Judge: Decentralized Arbitration Protocol
+**Building the Future of Justice on GenLayer**
 
 ---
 
-## 🌟 Overview
-Traditional legal disputes are slow, expensive, and centralized. **AI Judge** is a decentralized dApp that leverages GenLayer's unique **AI-Consensus** to provide instant, fair, and tamper-proof verdicts. By connecting directly to web-based evidence, it bridges the gap between real-world data and blockchain finality.
+## 🌟 Project Vision
+Traditional arbitration is slow, costly, and relies on human intermediaries. **AI Judge** is a decentralized application (dApp) that automates dispute resolution using GenLayer's revolutionary **AI-Consensus**. By fetching real-world evidence directly from the web, it provides impartial, fast, and immutable verdicts.
 
 ## 🚀 Key Features
-- **🌐 Web-Evidence Integration:** Automatically fetches real-time data from any URL using `gl.nondet.web.render`.
-- **🤖 Deterministic AI Logic:** Uses GenLayer's `strict_eq` consensus to ensure all validators agree on the AI's verdict.
-- **🔐 Immutable Judgments:** Once a case is "FINALIZED", the verdict and reasoning are permanently etched onto the blockchain.
-- **⚡ Zero-Trust Arbitration:** No human middleman; the code and the AI model are the judge and jury.
+- **🌐 Web-Evidence Verification:** Uses `gl.nondet.web.render` to analyze real-time data from any URL.
+- **🤖 Decentralized AI Judgment:** Leverages LLM agents that must reach consensus via the `strict_eq` principle.
+- **📜 Transparent & Immutable:** Every case, evidence link, and final verdict is recorded on the GenLayer blockchain.
+- **🛠 Scalable Design:** Built with the latest `py-genlayer:latest` standards for high performance.
 
 ---
 
-## 🏗 Architecture & Flow
-The contract follows a sophisticated non-deterministic flow to ensure accuracy:
-
-1. **Initialization:** Parties define the `agreement_terms` and provide an `evidence_url`.
-2. **Consensus Trigger:** The `resolve_dispute` function is called.
-3. **Off-Chain Execution:** Validators fetch web data and run the LLM prompt.
-4. **Validation:** The `strict_eq` principle ensures every node reaches the exact same JSON output.
-5. **Finalization:** The state is updated, and the winner is declared.
-
-
+## 🏗 How It Works (The Flow)
+1. **Case Creation:** A user opens a dispute by providing the **Agreement Terms** and a **URL** containing the evidence.
+2. **AI Analysis:** When `resolve_dispute` is called, GenLayer nodes fetch the web content.
+3. **Consensus:** The AI analyzes the evidence against the terms. All validators must agree on the winner and the reasoning.
+4. **Finalization:** Once finalized, the state is updated, and the judgment is issued.
 
 ---
 
-## 💻 Technical Implementation
-The contract is written in Python using the latest `py-genlayer:latest` framework.
+## 📸 Proof of Execution & Testing
+I have rigorously tested this contract in **GenLayer Studio** to ensure accuracy in different scenarios.
 
-### Example Input:
-- **Agreement Terms:** `"Seller must provide proof of delivery for the digital asset by Feb 2026."`
-- **Evidence URL:** `"https://api.github.com/repos/moltaphet/project/releases"`
+### 1. Contract Deployment
+The `AIJudge` contract successfully deployed on the GenLayer Local Node.
+![Studio Deployment](./screenshots/studio.png)
 
-### Success Result (Finalized):
-```json
-{
-  "winner": 1,
-  "reason": "The release log on GitHub confirms the asset was delivered on schedule.",
-  "status": "FINALIZED"
-}
+### 2. Success Scenario (Winner: Claimant)
+In this test, the AI confirmed that the terms were met based on the provided web evidence.
+![Success Verdict](./screenshots/success.png)
+
+### 3. Failure Scenario (Winner: Defendant)
+In this test, the AI detected that the terms were not fulfilled and ruled in favor of the defendant.
+![Failure Verdict](./screenshots/failure.png)
+
+---
+
+## 💻 Technical Stack
+- **Framework:** GenLayer Python SDK (`py-genlayer:latest`)
+- **Consensus Logic:** `gl.eq_principle.strict_eq`
+- **Data Fetching:** `gl.nondet.web.render`
+- **Environment:** Dockerized GenLayer Local Node
+
+---
+
+## 🛠 Setup & Installation
+1. **Clone the repo:**
+   ```bash
+   git clone [https://github.com/moltaphet/genlayer-project-boilerplate.git](https://github.com/moltaphet/genlayer-project-boilerplate.git)
 
 ```
 
----
-
-## 🛠 Installation & Testing
-
-To run this project locally, follow these steps:
-
-1. **Clone the repository:**
-```bash
-git clone [https://github.com/moltaphet/genlayer-project-boilerplate.git](https://github.com/moltaphet/genlayer-project-boilerplate.git)
-cd genlayer-project-boilerplate
-
-```
-
-
-2. **Spin up the GenLayer Node:**
-Make sure Docker is running, then execute:
+2. **Start the Node:**
 ```bash
 docker compose up
 
 ```
 
 
-3. **Deploy the Contract:**
-* Open [GenLayer Studio](https://studio.genlayer.com/).
-* Upload `contracts/ai_judge.py`.
-* Click **Deploy** and interact with the functions!
-
-
+3. **Interact:** Use GenLayer Studio to deploy `contracts/ai_judge.py` and start resolving disputes!
 
 ---
 
-## 📝 Mission Submission
-
-This project is part of the **"From Zero to GenLayer"** mission. It demonstrates the power of AI-driven smart contracts in solving complex, real-world problems through decentralized consensus.
-
-**Developed by:** [Moltaphet]
-**Powered by:** GenLayer AI Consensus
+**Developed for the GenLayer "From Zero to GenLayer" Mission.**
+*Harnessing the power of Intelligent Smart Contracts.*
 
 ```
+
+---
