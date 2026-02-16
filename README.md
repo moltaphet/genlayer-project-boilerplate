@@ -1,7 +1,3 @@
-
----
-
-```markdown
 # ⚖️ AI Judge: Decentralized Arbitration Protocol
 **Building the Future of Justice on GenLayer**
 
@@ -51,25 +47,23 @@ The AI detected that the terms were not fulfilled and ruled in favor of the defe
 ---
 
 ## 🛠 Setup & Installation
+
 1. **Clone the repo:**
-   ```bash
-   git clone [https://github.com/moltaphet/genlayer-project-boilerplate.git](https://github.com/moltaphet/genlayer-project-boilerplate.git)
+```bash
+git clone [https://github.com/moltaphet/genlayer-project-boilerplate.git](https://github.com/moltaphet/genlayer-project-boilerplate.git)
+cd genlayer-project-boilerplate
 
 ```
 
 2. **Start the Node:**
+
 ```bash
 docker compose up
 
 ```
-
 
 3. **Interact:** Use GenLayer Studio to deploy `contracts/ai_judge.py`.
 
 ---
 
 **Developed for the GenLayer "From Zero to GenLayer" Mission.**
-
-```
-
----
